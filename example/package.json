@@ -5,17 +5,17 @@
   "license": "MIT",
   "private": true,
   "type": "module",
-	"dependencies": {
-		"react": "^18.0.0",
-		"react-dom": "^18.0.0",
-		"zustand": "^5.0.0",
-		"react-pack-mule": "file:.."
-	},
-  "devDependencies": {
-    "esbuild": "^0.27.0"
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-pack-mule": "file:..",
+    "zustand": "^5.1.0"
   },
-	"scripts": {
-		"start": "esbuild src/index.jsx --bundle --servedir=public --outdir=public/build --serve=8080 --external:react --external:react-dom --external:zustand --format=esm",
-		"build": "esbuild src/index.jsx --bundle --sourcemap --outdir=public/build --external:react --external:react-dom --external:zustand --format=esm"
-	}
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  },
+  "scripts": {
+    "start": "esbuild src/index.jsx --bundle --servedir=public --outdir=public/build --serve=8080 --external:react --external:react-dom --external:zustand --format=esm",
+    "build": "esbuild src/index.jsx --bundle --sourcemap --outdir=public/build --external:react --external:react-dom --external:zustand --format=esm"
+  }
 }

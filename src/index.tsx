@@ -93,6 +93,7 @@ export const createStore = function createStore<TState extends object>(
 		};
 	}
 
+	// biome-ignore lint/correctness/noComponentHookFactories: createStore runs once at module level, not per render
 	function useGlobalState<Key extends StoreKey>(
 		propName: Key,
 		comparator?: (a: TState[Key], b: TState[Key]) => boolean,
